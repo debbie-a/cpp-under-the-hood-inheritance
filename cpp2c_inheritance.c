@@ -40,7 +40,7 @@ void doPhysicalBox()
     	printf("\npb4 is copy-constructed from pb1\n");
     	pb4.box = pb1.box;
 	pb4.material.material = pb1.material.material;
-s
+
     	_ZNK11PhysicalBox6printpEv(&pb4);
     	_ZNK11PhysicalBox6printpEv(&pb1);
     	printf("pb4 %s pb1\n",  pb4.box.width == pb1.box.width && pb4.box.height == pb1.box.height && pb4.box.length == pb1.box.length && pb4.material.material == pb1. material.material ? "equals" : "does not equal");

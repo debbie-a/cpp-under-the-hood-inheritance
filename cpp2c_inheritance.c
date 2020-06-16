@@ -77,7 +77,7 @@ void doWeightBox()
     	printf("pw4 %s pw1\n", pw4.box.width == pw1.box.width && pw4.box.height == pw1.box.height && pw4.box.length == pw1.box.length && pw4.weight == pw1.weight ? "equals" : "does not equal");
 
     	printf("\npw4 is copy-assigned from pw3\n");
-    	pw4 = pw3;
+    	_ZN9WeightBoxaSERKS_(&pw4, &pw3);
     	_ZNK9WeightBox6printwEv(&pw4);
     	_ZNK9WeightBox6printwEv(&pw3);
     	printf("pw4 %s pw3\n", pw4.box.width == pw3.box.width && pw4.box.height == pw3.box.height && pw4.box.length == pw3.box.length&& pw4.weight == pw3.weight ? "equals" : "does not equal");

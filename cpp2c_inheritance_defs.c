@@ -32,7 +32,7 @@ void _ZN11PhysicalBoxC1EN9Materials5TypesE(PhysicalBox *const this,Types t)
 {
 	const char* const names[] = { "Plastic", "Metal", "Wood", "Paper", "Other" };
 	_ZN3BoxC1Ed(&(this->box), 1);
-	this->material.material = OTHER;
+	this->material.material = t;
 	printf("Material created, set to %s\n",names[this->material.material]);
     	_ZNK11PhysicalBox6printpEv(this);
 	
@@ -78,7 +78,6 @@ void _ZN9WeightBoxD1Ev(const WeightBox *const this)
 
 WeightBox* _ZN9WeightBoxaSERKS_(WeightBox *const this, const WeightBox *const other)
 {
-	this->box = other->box;
     	this->weight = other->weight;
     	return this;
 }

@@ -38,13 +38,16 @@ void doPhysicalBox()
 	_ZN11PhysicalBoxC1Eddd(&pb3, 7, 7, 7);
     
     	printf("\npb4 is copy-constructed from pb1\n");
-    	pb4 = pb1;
+    	pb4.box = pb1.box;
+	pb4.material.material = pb1.material.material;
+s
     	_ZNK11PhysicalBox6printpEv(&pb4);
     	_ZNK11PhysicalBox6printpEv(&pb1);
     	printf("pb4 %s pb1\n",  pb4.box.width == pb1.box.width && pb4.box.height == pb1.box.height && pb4.box.length == pb1.box.length && pb4.material.material == pb1. material.material ? "equals" : "does not equal");
 
     	printf("\npb4 is copy-assigned from pb3\n");
     	pb4 = pb3;
+
     	_ZNK11PhysicalBox6printpEv(&pb4);
     	_ZNK11PhysicalBox6printpEv(&pb3);
     	printf("pb4 %s pb3\n", pb3.box.width ==pb4.box.width && pb3.box.height == pb4.box.height && pb3.box.length == pb4.box.length && pb4. material.material == pb3. material.material ? "equals" : "does not equal");

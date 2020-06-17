@@ -16,7 +16,8 @@ typedef enum Types
 
 typedef struct Materials
 {
-   
+   char nothing;
+
 }Materials;
 
 

@@ -5,17 +5,16 @@ void _ZN10Material_tC1EN9Materials5TypesE(Material_t *const this, Types mat)
 {
 	const char* const names[] = { "Plastic", "Metal", "Wood", "Paper", "Other" };
 	this->material = mat;
-	printf("Material created, set to %s\n",names[this->material]);
+	printf("Material created, set to %s\n",names[mat]);
 	
 }
 /* PhysicalBox Defs */
 
 void _ZN11PhysicalBoxC1Eddd(PhysicalBox *const this, double l, double w, double h)
 {
-	const char* const names[] = { "Plastic", "Metal", "Wood", "Paper", "Other" };
 	_ZN3BoxC1Eddd(&(this->box), l, w, h);
 	this->material.material = OTHER;
-	printf("Material created, set to %s\n",names[this->material.material]);
+	printf("Material created, set to Other\n");
 	_ZNK11PhysicalBox6printpEv(this);
 }
 
@@ -24,7 +23,7 @@ void _ZN11PhysicalBoxC1EdddN9Materials5TypesE(PhysicalBox *const this, double l,
 	const char* const names[] = { "Plastic", "Metal", "Wood", "Paper", "Other" };
 	_ZN3BoxC1Eddd(&(this->box), l, w, h);
 	this->material.material = t;
-	printf("Material created, set to %s\n",names[this->material.material]);
+	printf("Material created, set to %s\n",names[t]);
 	_ZNK11PhysicalBox6printpEv(this);
 }
 
@@ -33,7 +32,7 @@ void _ZN11PhysicalBoxC1EN9Materials5TypesE(PhysicalBox *const this,Types t)
 	const char* const names[] = { "Plastic", "Metal", "Wood", "Paper", "Other" };
 	_ZN3BoxC1Ed(&(this->box), 1);
 	this->material.material = t;
-	printf("Material created, set to %s\n",names[this->material.material]);
+	printf("Material created, set to %s\n",names[t]);
     	_ZNK11PhysicalBox6printpEv(this);
 	
 }

@@ -38,8 +38,7 @@ void doPhysicalBox()
 	_ZN11PhysicalBoxC1Eddd(&pb3, 7, 7, 7);
     
     	printf("\npb4 is copy-constructed from pb1\n");
-    	pb4.box = pb1.box;
-	pb4.material.material = pb1.material.material;
+    	pb4 = pb1;
 
     	_ZNK11PhysicalBox6printpEv(&pb4);
     	_ZNK11PhysicalBox6printpEv(&pb1);

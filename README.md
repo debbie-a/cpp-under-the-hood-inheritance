@@ -1,1 +1,3 @@
-# cpp-uth-inheritance-d-a-mby
+# Description:
+
+The task was to implement the underlying implementation of polymorphism
